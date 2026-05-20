@@ -13,7 +13,7 @@ export default function HeroSection() {
           clarity without complexity.
         </p>
         <div className="border-2 px-4 py-2 rounded-lg hover:bg-black hover:text-white hover:duration-400">
-          <NavLink to="/login">Get Started</NavLink>
+          <NavLink to="/auth/login">Get Started</NavLink>
         </div>
         <p>Minimal interface • Fast workflow • Built for deep focus</p>
       </div>

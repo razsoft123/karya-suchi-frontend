@@ -13,7 +13,7 @@ export default function Navbar() {
             <NavLink to="/help">Help</NavLink>
           </li>
           <li>
-            <NavLink to="/login">Get Started</NavLink>
+            <NavLink to="/auth/login">Get Started</NavLink>
           </li>
         </ul>
       </div>
