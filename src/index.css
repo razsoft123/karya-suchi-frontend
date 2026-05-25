@@ -2,7 +2,85 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
 
+:root {
+  --color-primary: #2563eb;
+  --color-primary-hover: #1d4ed8;
+  --color-primary-soft: #dbeafe;
+
+  --color-background: #f8fafc;
+  --color-foreground: #ffffff;
+  --color-border: #e2e8f0;
+  --color-soft-border: #edf2f7;
+  --color-heading-text: #0f172a;
+  --color-body-text: #334155;
+  --color-muted-text: #64748b;
+  --color-disable: #94a3b8;
+
+  --color-success: #16a34a;
+  --color-warnings: #f59e0b;
+  --color-error: #dc2626;
+  --color-info: #0284c7;
+}
+
+[data-theme="dark"] {
+  --color-background: #020617;
+  --color-foreground: #0f172a;
+  --color-border: #e2e8f0;
+  --color-soft-border: #edf2f7;
+  --color-heading-text: #cbd5e1;
+  --color-body-text: #f8fafc;
+  --color-muted-text: #64748b;
+  --color-disable: #94a3b8;
+}
+
 @theme {
+  /* Color setup */
+
+  --color-app-primary: var(--color-primary);
+  --color-app-primary-hover: var(--color-primary-hover);
+  --color-app-primary-soft: var(--color-primary-soft);
+
+  --color-app-success: var(--color-success);
+  --color-app-warnings: var(--color-warnings);
+  --color-app-error: var(--color-error);
+  --color-app-info: var(--color-info);
+
+  --color-app-bg: var(--color-background);
+  --color-app-fg: var(--color-foreground);
+  --color-app-border: var(--color-border);
+  --color-app-soft-border: var(--color-soft-border);
+  --color-app-heading: var(--color-heading-text);
+  --color-app-body: var(--color-body-text);
+  --color-app-muted: var(--color-muted-text);
+  --color-app-disable: var(--color-disable);
+
+  /* Fonts setup */
   --font-inter: "Inter", sans-serif;
   --font-popins: "Poppins", sans-serif;
+
+  /* Font size setup */
+  --text-display: 48px;
+  --text-h1: 36px;
+  --text-h2: 30px;
+  --text-h3: 24px;
+  --text-h4: 20px;
+
+  --text-body-lg: 18px;
+  --text-body: 16px;
+  --text-body-sm: 14px;
+  --text-body-cap: 12px;
+
+  /* Font size mobile screen */
+  --text-ms-h1: 32px;
+  --text-ms-h2: 28px;
+  --text-ms-h3: 22px;
+
+  /* Font weight */
+  --font-weight-display: 700;
+  --font-weight-h1: 700;
+  --font-weight-h2: 700;
+  --font-weight-h3: 600;
+  --font-weight-h4: 600;
+
+  --font-weight-body: 400;
 }
