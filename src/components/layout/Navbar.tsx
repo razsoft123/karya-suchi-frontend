@@ -32,7 +32,7 @@ export default function Navbar() {
         </ul>
         <button
           onClick={() => toggleTheme()}
-          className="px-4 font-semibold text-base border-2 bg-app-bg text-app-body"
+          className="px-4 font-semibold text-base border-2 rounded-lg cursor-pointer bg-app-bg text-app-body"
         >
           Dark Mode
         </button>
