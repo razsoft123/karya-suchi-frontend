@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="flex flex-col gap-4 px-4 py-2 w-full">
+    <footer className="font-inter flex flex-col gap-4 px-4 py-2 w-full">
       <div className="flex justify-between">
         <div>
           <div>Karay Suchi</div>
