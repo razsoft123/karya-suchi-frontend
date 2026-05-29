@@ -4,7 +4,7 @@ export default function HeroSection() {
   return (
     <section className="w-full min-h-dvh flex justify-center items-center">
       <div className="font-inter flex gap-4 justify-center items-center flex-col max-w-3xl">
-        <h1 className="font-inter text-[48px] font-bold text-center">
+        <h1 className="font-inter text-display font-bold text-center">
           Organize Tasks and Notes in One Intelligent Workspace
         </h1>
         <p className="font-inter text-center text-xl font-normal">
