@@ -5,13 +5,13 @@ import Sidebar from "./Sidebar";
 
 export default function DashboardLayout() {
   return (
-    <>
+    <div className="w-full h-dvh min-h-120 flex">
       <Toaster position="top-right" reverseOrder={false} />
-      <Topbar />
-      <div className="flex w-full">
-        <Sidebar />
+      <Sidebar />
+      <div className="flex w-full flex-col">
+        <Topbar />
         <Outlet />
       </div>
-    </>
+    </div>
   );
 }
