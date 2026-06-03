@@ -1,6 +1,7 @@
 import { NavLink } from "react-router";
 import { fakeUser } from "../../fakeData";
 import { fakeAllTasks } from "../../fakeData";
+import TaskCard from "../../components/task/TaskCard";
 
 export default function Dashboard() {
   return (
@@ -28,7 +29,11 @@ export default function Dashboard() {
         {/* Today's task section */}
         {/* Today's Tasks ✓ Design Landing Page, ✓ Fix Authentication Bug, ○ Prepare Interview, ○ Deploy Backend */}
         <section>
-          <div>{/* Task cards */}</div>
+          <div className="w-full grid grid-cols-4 gap-4">
+            {fakeAllTasks.map((task) => {
+              return <TaskCard key={task.id} task={task} />;
+            })}
+          </div>
         </section>
 
         {/* Recent Notes */}
