@@ -8,7 +8,7 @@ import NoteCard from "../../components/notes/NoteCard";
 
 export default function Dashboard() {
   return (
-    <main className="px-4 py-4 border-2">
+    <main className="px-4 py-4">
       <div className="flex flex-col gap-6">
         {/* Greeting section */}
         {/* Good Morning, Rohit 👋 You have 6 tasks due today, 2 overdue tasks, 3 upcoming deadlines */}

@@ -10,6 +10,7 @@ import AuthLayout from "./pages/auth/AuthLayout";
 import DashboardLayout from "./components/layout/DashboardLayout";
 import Dashboard from "./pages/dashboard/Dashboard";
 import ProtectedLayouts from "./components/layout/ProtectedLayout";
+import Workspace from "./pages/workspace/Workspace";
 
 const router = createBrowserRouter([
   {
@@ -30,9 +31,11 @@ const router = createBrowserRouter([
     Component: ProtectedLayouts,
     children: [
       {
-        path: "dashboard",
         Component: DashboardLayout,
-        children: [{ index: true, Component: Dashboard }],
+        children: [
+          { path: "dashboard", Component: Dashboard },
+          { path: "workspace", Component: Workspace },
+        ],
       },
     ],
   },
