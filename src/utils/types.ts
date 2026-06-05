@@ -10,4 +10,12 @@ interface Task {
   workspace?: string;
 }
 
-export type { Task };
+interface Note {
+  id: string;
+  title: string;
+  content?: string;
+  createdAt: string;
+  workspace?: string;
+}
+
+export type { Task, Note };

@@ -1,7 +1,10 @@
 import { NavLink } from "react-router";
+import TaskCard from "../../components/task/TaskCard";
+
 import { fakeUser } from "../../fakeData";
 import { fakeAllTasks } from "../../fakeData";
-import TaskCard from "../../components/task/TaskCard";
+import { fakeNotes } from "../../fakeData";
+import NoteCard from "../../components/notes/NoteCard";
 
 export default function Dashboard() {
   return (
@@ -39,7 +42,11 @@ export default function Dashboard() {
         {/* Recent Notes */}
         {/* Recent Notes, Project Architecture, Interview Preparation, Karaya Suchi Roadmap */}
         <section>
-          <div>{/* Notes cards */}</div>
+          <div className="w-full grid grid-cols-4 gap-4">
+            {fakeNotes.map((note) => (
+              <NoteCard key={note.id} note={note} />
+            ))}
+          </div>
         </section>
 
         {/* Upcoming deadline */}
