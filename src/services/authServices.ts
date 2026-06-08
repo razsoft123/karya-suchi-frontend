@@ -11,14 +11,14 @@ async function login(email: string, password: string) {
 }
 
 async function register(name: string, email: string, password: string) {
-  return await apiClient("/auth/register", {
+  return await apiClient("/register", {
     method: "POST",
     body: JSON.stringify({ name, email, password }),
   });
 }
 
 async function forgetPassword(email: string) {
-  return await apiClient("/auth/forget-password", {
+  return await apiClient("/forget-password", {
     method: "POST",
     body: JSON.stringify({ email }),
   });
@@ -30,7 +30,7 @@ async function resetPassword(
   newPass: string,
   confPass: string,
 ) {
-  return await apiClient("auth/reset-password", {
+  return await apiClient("/reset-password", {
     method: "PUT",
     body: JSON.stringify({
       email,
