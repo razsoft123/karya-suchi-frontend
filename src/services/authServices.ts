@@ -1,7 +1,7 @@
 import apiClient from "./apiClient";
 
 async function login(email: string, password: string) {
-  return await apiClient("/auth/login", {
+  return await apiClient("/login", {
     method: "POST",
     body: JSON.stringify({
       email,

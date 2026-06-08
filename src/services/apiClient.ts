@@ -6,6 +6,16 @@ interface ApiOptions extends RequestInit {
   headers?: Record<string, string>;
 }
 
+// Handling error
+export class ApiError extends Error {
+  status: number;
+
+  constructor(message: string, status: number) {
+    super(message);
+    this.status = status;
+  }
+}
+
 async function apiClient<T = any>(
   apiEndpoint: string,
   options: ApiOptions = {},
@@ -25,7 +35,7 @@ async function apiClient<T = any>(
       const errorData = await response.json().catch(() => ({}));
       const errorMessage =
         errorData.message || `HTTP error! Status: ${response.status}`;
-      throw new Error(errorMessage);
+      throw new ApiError(errorMessage, response.status);
     }
 
     return response.json() as Promise<T>;

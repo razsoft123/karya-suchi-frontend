@@ -1,5 +1,19 @@
 // The file will contain information about all the types
 
+interface User {
+  id: string;
+  email: string;
+  name: string;
+}
+
+// Auth related types
+interface AuthState {
+  user: User | null;
+  loading: boolean;
+  error: boolean;
+  auth: boolean;
+}
+
 interface Task {
   id: string;
   title: string;
@@ -18,4 +32,4 @@ interface Note {
   workspace?: string;
 }
 
-export type { Task, Note };
+export type { User, AuthState, Task, Note };
