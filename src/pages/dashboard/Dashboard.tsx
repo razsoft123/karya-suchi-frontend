@@ -1,5 +1,5 @@
-import { NavLink } from "react-router";
 import TaskCard from "../../components/task/TaskCard";
+import DashboardButton from "../../components/common/DashboardButton";
 
 import { fakeUser } from "../../fakeData";
 import { fakeAllTasks } from "../../fakeData";
@@ -8,7 +8,7 @@ import NoteCard from "../../components/notes/NoteCard";
 
 export default function Dashboard() {
   return (
-    <main className="px-4 py-4">
+    <main className="px-4 py-4 max-h-dvh overflow-scroll">
       <div className="flex flex-col gap-6">
         {/* Greeting section */}
         {/* Good Morning, Rohit 👋 You have 6 tasks due today, 2 overdue tasks, 3 upcoming deadlines */}
@@ -24,9 +24,9 @@ export default function Dashboard() {
         {/* Quick actions section */}
         {/* + New Task, + New Note, + New Workspace, + Start Whiteboard */}
         <section className="flex gap-4">
-          <QuickActionCard text="New Task" to="/workspace/task/new" />
-          <QuickActionCard text="New Note" to="/workspace/note/new" />
-          <QuickActionCard text="New Workspace" to="/workspace/new" />
+          <DashboardButton text="New Task" to="/workspace/task/new" />
+          <DashboardButton text="New Note" to="/workspace/note/new" />
+          <DashboardButton text="New Workspace" to="/workspace/new" />
         </section>
 
         {/* Today's task section */}
@@ -62,35 +62,35 @@ export default function Dashboard() {
   );
 }
 
-interface QuickActionCardType {
-  text: string;
-  to: string;
-}
+// interface QuickActionCardType {
+//   text: string;
+//   to: string;
+// }
 
-function QuickActionCard({ text, to }: QuickActionCardType) {
-  return (
-    <NavLink to={to}>
-      <div className="border border-slate-300 px-6 py-4 rounded-2xl">
-        <div className="flex gap-2">
-          <div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="size-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M12 4.5v15m7.5-7.5h-15"
-              />
-            </svg>
-          </div>
-          <span className="font-inter text-lg">{text}</span>
-        </div>
-      </div>
-    </NavLink>
-  );
-}
+// function QuickActionCard({ text, to }: QuickActionCardType) {
+//   return (
+//     <NavLink to={to}>
+//       <div className="border border-slate-300 px-6 py-4 rounded-2xl hover:bg-slate-300 duration-300">
+//         <div className="flex gap-2">
+//           <div>
+//             <svg
+//               xmlns="http://www.w3.org/2000/svg"
+//               fill="none"
+//               viewBox="0 0 24 24"
+//               strokeWidth={1.5}
+//               stroke="currentColor"
+//               className="size-6"
+//             >
+//               <path
+//                 strokeLinecap="round"
+//                 strokeLinejoin="round"
+//                 d="M12 4.5v15m7.5-7.5h-15"
+//               />
+//             </svg>
+//           </div>
+//           <span className="font-inter text-lg">{text}</span>
+//         </div>
+//       </div>
+//     </NavLink>
+//   );
+// }

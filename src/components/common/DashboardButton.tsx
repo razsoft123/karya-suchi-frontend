@@ -8,7 +8,7 @@ interface DBObject {
 export default function DashboardButton({ to, text }: DBObject) {
   return (
     <NavLink to={to}>
-      <div className="border border-slate-300 px-6 py-4 rounded-2xl">
+      <div className="border border-slate-300 px-6 py-4 rounded-2xl hover:bg-slate-300 duration-300">
         <div className="flex gap-2">
           <div>
             <svg
