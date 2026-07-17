@@ -1,0 +1,9 @@
+.navItem {
+  border: solid white 1px;
+  padding: 2px 4px;
+}
+
+.navItem:hover {
+  border: solid black 1px;
+  border-radius: 4px;
+}
