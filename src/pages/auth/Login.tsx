@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import { useLoginMutation } from "../../queries/loginMutation";
+import { NavLink } from "react-router";
 import toast from "react-hot-toast";
 
 export default function Login() {
@@ -38,6 +39,13 @@ export default function Login() {
 
   return (
     <div className="w-[320px] border border-slate-500 shadow-lg  rounded-xl px-4 py-4">
+      <div>
+        <span>
+          {" "}
+          <NavLink to="/">{"<-"} back </NavLink>
+        </span>
+      </div>
+      
       <div className="w-full">
         <p className="w-full text-center text-2xl font-semibold">Login</p>
       </div>
@@ -69,6 +77,14 @@ export default function Login() {
           >
             {mutation.isPending ? "Logging in..." : "Login"}
           </button>
+        </div>
+        <div className="w-full h-full flex items-center justify-center">
+          <p>
+            Don't have and account{" "}
+            <NavLink className="font-semibold underline" to="/auth/register">
+              register
+            </NavLink>
+          </p>
         </div>
       </div>
     </div>

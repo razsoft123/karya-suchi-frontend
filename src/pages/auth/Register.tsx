@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import { useRegisterMutation } from "../../queries/registerMutation";
+import { NavLink } from "react-router";
 import toast from "react-hot-toast";
 
 export default function Register() {
@@ -36,6 +37,12 @@ export default function Register() {
 
   return (
     <div className="w-[320px] border border-slate-500 shadow-lg  rounded-xl px-4 py-4">
+      <div>
+        <span>
+          {" "}
+          <NavLink to="/">{"<-"} back </NavLink>
+        </span>
+      </div>
       <div className="w-full">
         <p className="w-full text-center text-2xl font-semibold">Register</p>
       </div>
@@ -67,6 +74,7 @@ export default function Register() {
             type="password"
           />
         </div>
+
         <div className="flex justify-center items-center w-full mt-5 mb-4">
           <button
             className="border-2 cursor-pointer hover:bg-black hover:text-white hover:duration-300 px-4 py-2 rounded-lg"
@@ -75,6 +83,15 @@ export default function Register() {
           >
             Register
           </button>
+        </div>
+
+        <div className="w-full h-full flex items-center justify-center">
+          <p>
+            Don't have and account{" "}
+            <NavLink className="font-semibold underline" to="/auth/login">
+              login
+            </NavLink>
+          </p>
         </div>
       </div>
     </div>
