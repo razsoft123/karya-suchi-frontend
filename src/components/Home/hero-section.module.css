@@ -1,0 +1,17 @@
+.radialGradientBgTop {
+  background-image: radial-gradient(
+    circle at top -50% left -50%,
+    rgba(55, 55, 55, 0.8) 0%,
+    rgba(255, 255, 255, 1) 70%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+.radialGradientBgBottom {
+  background-image: radial-gradient(
+    circle at bottom -50% right -50%,
+    rgba(55, 55, 55, 0.8) 0%,
+    rgba(255, 255, 255, 1) 70%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
