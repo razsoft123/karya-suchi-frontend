@@ -11,11 +11,22 @@ import DashboardLayout from "./components/layout/DashboardLayout";
 import Dashboard from "./pages/dashboard/Dashboard";
 import ProtectedLayouts from "./components/layout/ProtectedLayout";
 import Workspace from "./pages/workspace/Workspace";
+import FeauresPage from "./pages/FeaturesPage";
+import HelpPage from "./pages/HelpPage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     Component: HomePage,
+  },
+  {
+    path: "/features",
+    Component: FeauresPage,
+  },
+  {
+    path: "/help",
+    Component: HelpPage,
   },
   {
     path: "auth",
@@ -38,6 +49,10 @@ const router = createBrowserRouter([
         ],
       },
     ],
+  },
+  {
+    path: "*",
+    Component: NotFoundPage,
   },
 ]);
 
