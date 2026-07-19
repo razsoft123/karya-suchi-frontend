@@ -1,9 +1,8 @@
 .navItem {
-  border: solid white 1px;
-  padding: 2px 4px;
+  border-bottom: solid white 2px;
+  padding: 0 5px;
 }
 
 .navItem:hover {
-  border: solid black 1px;
-  border-radius: 4px;
+  border-bottom: solid black 2px;
 }
