@@ -44,7 +44,7 @@ export default function Login() {
           Login
         </p>
       </div>
-      <div className="flex flex-col gap-2 font-inter">
+      <div className="flex flex-col gap-4 font-inter">
         <div className="w-full flex flex-col gap-1">
           <label className="font-semibold text-sm">Email ID:</label>
           <input
@@ -63,13 +63,13 @@ export default function Login() {
             type="password"
           />
         </div>
-        <div className="w-full">
+        {/* <div className="w-full">
           <p className="text-right">
             <NavLink to="/auth/forgot-password" className="text-slate-600">
               forgot password?
             </NavLink>
           </p>
-        </div>
+        </div> */}
         <div className="flex justify-center items-center w-full mt-5 mb-4">
           <button
             className="border-2 cursor-pointer bg-black text-white hover:bg-white hover:text-black hover:duration-300 px-4 py-2 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed"

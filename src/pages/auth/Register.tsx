@@ -36,7 +36,7 @@ export default function Register() {
   }
 
   return (
-    <div className="w-[320px] border border-slate-500 shadow-lg  rounded-xl px-4 py-4">
+    <div className="w-[320px] bg-app-fg border border-app-border font-inter shadow-lg  rounded-xl px-4 py-4">
       {/* <div>
         <span>
           {" "}
@@ -44,31 +44,33 @@ export default function Register() {
         </span>
       </div> */}
       <div className="w-full">
-        <p className="w-full text-center text-2xl font-semibold">Register</p>
+        <p className="font-inter w-full text-center text-3xl font-bold py-4">
+          Register
+        </p>
       </div>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-4 font-inter">
         <div className="w-full flex flex-col gap-1">
-          <label>Full Name:</label>
+          <label className="font-semibold text-sm">Full Name:</label>
           <input
-            className="border rounded-md px-2 py-1"
+            className="border border-slate-400 rounded-md px-2 py-1"
             value={name}
             onChange={(e) => setName(e.target.value)}
             type="text"
           />
         </div>
         <div className="w-full flex flex-col gap-1">
-          <label>Email ID:</label>
+          <label className="font-semibold text-sm">Email ID:</label>
           <input
-            className="border rounded-md px-2 py-1"
+            className="border border-slate-400 rounded-md px-2 py-1"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             type="email"
           />
         </div>
         <div className="w-full flex flex-col gap-1">
-          <label>Password:</label>
+          <label className="font-semibold text-sm">Password:</label>
           <input
-            className="border rounded-md px-2 py-1"
+            className="border border-slate-400 rounded-md px-2 py-1"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             type="password"
@@ -77,7 +79,7 @@ export default function Register() {
 
         <div className="flex justify-center items-center w-full mt-5 mb-4">
           <button
-            className="border-2 cursor-pointer hover:bg-black hover:text-white hover:duration-300 px-4 py-2 rounded-lg"
+            className="border-2 cursor-pointer bg-black text-white hover:bg-white hover:text-black hover:duration-300 px-4 py-2 rounded-lg"
             type="submit"
             onClick={() => handleRegister()}
           >
@@ -86,9 +88,12 @@ export default function Register() {
         </div>
 
         <div className="w-full h-full flex items-center justify-center">
-          <p>
+          <p className="text-slate-600">
             Don't have and account{" "}
-            <NavLink className="font-semibold underline" to="/auth/login">
+            <NavLink
+              className="font-semibold underline text-black"
+              to="/auth/login"
+            >
               login
             </NavLink>
           </p>
