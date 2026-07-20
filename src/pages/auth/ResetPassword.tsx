@@ -1,23 +1,31 @@
 export default function ResetPassword() {
   return (
-    <div className="w-[320px] border border-slate-500 shadow-lg  rounded-xl px-4 py-4">
+    <div className="font-inter w-[320px] bg-app-fg border-app-border borde shadow-lg  rounded-xl px-4 py-4">
       <div className="w-full">
-        <p className="w-full text-center text-2xl font-semibold">
+        <p className="font-inter w-full text-center text-3xl font-bold py-4">
           Reset Password
         </p>
       </div>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-4 font-inter">
         <div className="w-full flex flex-col gap-1">
-          <label>Enter New Password: </label>
-          <input className="border rounded-md px-2 py-1" type="email" />
+          <label className="font-semibold text-sm">Enter New Password: </label>
+          <input
+            className="border border-slate-400 rounded-md px-2 py-1"
+            type="email"
+          />
         </div>
         <div className="w-full flex flex-col gap-1">
-          <label>Confirm New Password: </label>
-          <input className="border rounded-md px-2 py-1" type="email" />
+          <label className="font-semibold text-sm">
+            Confirm New Password:{" "}
+          </label>
+          <input
+            className="border border-slate-400 rounded-md px-2 py-1"
+            type="email"
+          />
         </div>
         <div className="flex justify-center items-center w-full mt-5 mb-4">
           <button
-            className="border-2 cursor-pointer hover:bg-black hover:text-white hover:duration-300 px-4 py-2 rounded-lg"
+            className="font-inter bg-black text-white border-2 cursor-pointer hover:bg-white hover:text-black hover:duration-300 px-4 py-2 rounded-lg"
             type="submit"
           >
             Set New Password
