@@ -3,7 +3,7 @@ import { RouterProvider } from "react-router/dom";
 import HomePage from "./pages/HomePage";
 import "./App.css";
 import Register from "./pages/auth/Register";
-import ForgetPassword from "./pages/auth/ForgetPassword";
+import ForgotPassword from "./pages/auth/ForgotPassword";
 import ResetPassword from "./pages/auth/ResetPassword";
 import Login from "./pages/auth/Login";
 import AuthLayout from "./pages/auth/AuthLayout";
@@ -34,7 +34,7 @@ const router = createBrowserRouter([
     children: [
       { path: "login", Component: Login },
       { path: "register", Component: Register },
-      { path: "forget-password", Component: ForgetPassword },
+      { path: "forgot-password", Component: ForgotPassword },
       { path: "reset-password", Component: ResetPassword },
     ],
   },

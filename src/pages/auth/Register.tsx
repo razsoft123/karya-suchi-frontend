@@ -37,12 +37,12 @@ export default function Register() {
 
   return (
     <div className="w-[320px] border border-slate-500 shadow-lg  rounded-xl px-4 py-4">
-      <div>
+      {/* <div>
         <span>
           {" "}
           <NavLink to="/">{"<-"} back </NavLink>
         </span>
-      </div>
+      </div> */}
       <div className="w-full">
         <p className="w-full text-center text-2xl font-semibold">Register</p>
       </div>

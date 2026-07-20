@@ -1,4 +1,4 @@
-export default function ForgetPassword() {
+export default function ForgotPassword() {
   return (
     <div className="w-[320px] border border-slate-500 shadow-lg  rounded-xl px-4 py-4">
       <div className="w-full">
