@@ -38,6 +38,9 @@ export default function Dashboard() {
         {/* Today's task section */}
         {/* Today's Tasks ✓ Design Landing Page, ✓ Fix Authentication Bug, ○ Prepare Interview, ○ Deploy Backend */}
         <section>
+          <div>
+            <p className="font-inter py-6 font-bold text-lg">My Task</p>
+          </div>
           <div className="w-full grid grid-cols-4 gap-4">
             {fakeAllTasks.map((task) => {
               return <TaskCard key={task.id} task={task} />;
