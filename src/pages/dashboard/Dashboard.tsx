@@ -1,5 +1,6 @@
 import TaskCard from "../../components/task/TaskCard";
 import DashboardButton from "../../components/common/DashboardButton";
+import ImportantInfoCard from "../../components/common/ImportantInfoCard";
 
 import { fakeUser } from "../../fakeData";
 import { fakeAllTasks } from "../../fakeData";
@@ -8,25 +9,30 @@ import NoteCard from "../../components/notes/NoteCard";
 
 export default function Dashboard() {
   return (
-    <main className="px-4 py-4 max-h-dvh overflow-scroll">
+    <main className="font-inter px-4 py-4 max-h-dvh overflow-scroll">
       <div className="flex flex-col gap-6">
-        {/* Greeting section */}
-        {/* Good Morning, Rohit 👋 You have 6 tasks due today, 2 overdue tasks, 3 upcoming deadlines */}
         <section>
-          <h1 className="font-inter text-3xl font-bold">
+          <h1 className="font-inter text-2xl font-semibold">
             Good Morning, {fakeUser.name}
           </h1>
-          <p className="font-inter text-body text-slate-600">
+          <p className="font-inter text-sm text-slate-600">
             You have 6 tasks due today, 2 overdue tasks, 3 upcoming deadlines
           </p>
         </section>
 
         {/* Quick actions section */}
         {/* + New Task, + New Note, + New Workspace, + Start Whiteboard */}
-        <section className="flex gap-4">
+        <section className="flex gap-8">
           <DashboardButton text="New Task" to="/workspace/task/new" />
           <DashboardButton text="New Note" to="/workspace/note/new" />
           <DashboardButton text="New Workspace" to="/workspace/new" />
+        </section>
+
+        {/* Important information section */}
+        <section className="flex gap-8">
+          <ImportantInfoCard />
+          <ImportantInfoCard />
+          <ImportantInfoCard />
         </section>
 
         {/* Today's task section */}
