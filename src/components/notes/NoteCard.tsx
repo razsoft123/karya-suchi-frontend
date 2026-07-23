@@ -5,7 +5,7 @@ import { EllipsisVertical, Layers } from "lucide-react";
 export default function NoteCard({ note }: { note: Note }) {
   return (
     <NavLink to={`/node/${note.id}`}>
-      <div className="font-inter flex flex-col gap-6 px-6 py-6 border border-slate-300 rounded-xl">
+      <div className="font-inter flex flex-col gap-6 px-6 py-6 border border-app-border rounded-xl">
         <span className="hidden">{note.id}</span>
         <div className="flex w-full items-center justify-between">
           <div className="bg-gray-200 px-2 py-2 rounded-sm">

@@ -6,6 +6,7 @@ import { fakeUser } from "../../fakeData";
 import { fakeAllTasks } from "../../fakeData";
 import { fakeNotes } from "../../fakeData";
 import NoteCard from "../../components/notes/NoteCard";
+import WorkspaceCard from "../../components/workspace/WorkspaceCard";
 
 export default function Dashboard() {
   return (
@@ -57,6 +58,21 @@ export default function Dashboard() {
           <div className="w-full grid grid-cols-4 gap-4">
             {fakeNotes.map((note) => (
               <NoteCard key={note.id} note={note} />
+            ))}
+          </div>
+        </section>
+
+        {/* Recent Workspaces */}
+        {/* Recent Workspace, Workspace is last updated by you */}
+        <section>
+          <div>
+            <p className="font-inter py-6 font-bold text-lg">
+              Recent Workspace
+            </p>
+          </div>
+          <div className="w-full grid grid-cols-4 gap-4">
+            {fakeNotes.map((note) => (
+              <WorkspaceCard key={note.id} />
             ))}
           </div>
         </section>

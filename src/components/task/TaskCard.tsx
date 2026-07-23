@@ -4,7 +4,7 @@ import { Database, Calendar } from "lucide-react";
 
 export default function TaskCard({ task }: { task: Task }) {
   return (
-    <div className="relative font-inter flex flex-col gap-4 border border-app-border px-4 pt-4 pb-16 rounded-xl">
+    <div className="relative font-inter flex flex-col gap-6 border border-app-border px-4 pt-4 pb-16 rounded-xl">
       <span className="hidden">{task.id}</span>
       <span className="hidden">{task.workspace}</span>
 
