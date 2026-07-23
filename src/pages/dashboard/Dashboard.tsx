@@ -51,6 +51,9 @@ export default function Dashboard() {
         {/* Recent Notes */}
         {/* Recent Notes, Project Architecture, Interview Preparation, Karaya Suchi Roadmap */}
         <section>
+          <div>
+            <p className="font-inter py-6 font-bold text-lg">Recent Notes</p>
+          </div>
           <div className="w-full grid grid-cols-4 gap-4">
             {fakeNotes.map((note) => (
               <NoteCard key={note.id} note={note} />
