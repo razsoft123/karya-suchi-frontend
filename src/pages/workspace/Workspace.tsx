@@ -16,7 +16,7 @@ export default function Workspace() {
         {/* List of recent workspace */}
         <section>
           {fakeWorkspaces.map((workspace) => (
-            <WorkspaceCard key={workspace.id} workspace={workspace} />
+            <WorkspaceCard key={workspace.id} />
           ))}
         </section>
       </div>

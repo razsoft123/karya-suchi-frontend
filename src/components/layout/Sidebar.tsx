@@ -20,7 +20,7 @@ export default function Sidebar() {
             icon={House}
             active={true}
           />
-          <SidebarList text="Task" to="/tasks" icon={ListTodo} />
+          <SidebarList text="Tasks" to="/tasks" icon={ListTodo} />
           <SidebarList text="Notes" to="/notes" icon={NotebookPen} />
           <SidebarList text="Workspace" to="/workspace" icon={Grid2x2Plus} />
         </ul>

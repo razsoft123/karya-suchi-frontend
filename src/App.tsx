@@ -14,7 +14,8 @@ import Workspace from "./pages/workspace/Workspace";
 import FeauresPage from "./pages/FeaturesPage";
 import HelpPage from "./pages/HelpPage";
 import NotFoundPage from "./pages/NotFoundPage";
-
+import Notes from "./pages/notes/Notes";
+import Tasks from "./pages/tasks/Tasks";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -45,6 +46,8 @@ const router = createBrowserRouter([
         Component: DashboardLayout,
         children: [
           { path: "dashboard", Component: Dashboard },
+          { path: "tasks", Component: Tasks },
+          { path: "notes", Component: Notes },
           { path: "workspace", Component: Workspace },
         ],
       },
